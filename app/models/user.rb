@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  def User.search(search, user_or_post)
-    if user_or_post == "1"
+  def User.search(search)
+    if search != nil
       User.where(['name LIKE ?', "%#{search}%"])
     else
       User.all

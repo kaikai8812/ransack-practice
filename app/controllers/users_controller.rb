@@ -64,9 +64,9 @@ class UsersController < ApplicationController
   def search
     @user_or_post = params[:option]
     if @user_or_post == "1"
-      @users = User.search(params[:search], @user_or_post)
+      @users = User.search(params[:search])
     else
-      @posts = Post.search(params[:search], @user_or_post)
+      @posts = Post.search(params[:search])
     end
   end
 
